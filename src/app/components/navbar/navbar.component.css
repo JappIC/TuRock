@@ -1,0 +1,38 @@
+.navbar{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto;
+    padding: 5px 10px;
+}
+
+.navbar .logo, .navbar .user{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.navbar .logo img, .navbar .user img{
+    max-width: 40px;
+    height: auto;
+    padding: 0 5px;
+}
+
+.navbar .nav{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.navbar .nav a{
+    padding: 5px 10px;
+}
+
+.navbar .user img{
+    border-radius: 50%;
+}
+
+.navbar .user span{
+    font-size: 20px;
+    font-family: 'Metal Mania', cursive;
+}
