@@ -1,12 +1,14 @@
+<!-- Imagen de papel-->
+<img class="papel-turock ptr-top" src="/assets/img/papel.png" alt="Papel TuRock">
+
 <header class="navbar">
     <div class="logo">
         <img src="assets/img/LogoTuRock.png" alt="TuRock">
         <h1>Título</h1>
     </div>
     <nav class="nav">
-        <a href="">Home</a>
-        <a href="">Home</a>
-        <a href="">Home</a>
+        <a [routerLink]="['home']" routerLinkActive="active" >Home</a>
+        <a [routerLink]="['groups']" routerLinkActive="active" >Grupos</a>
         <input type="search">
     </nav>
     <div class="user">
@@ -14,4 +16,5 @@
         <span>Nombre</span>
     </div>
 </header>
+
 

@@ -1,8 +1,16 @@
 .navbar{
+    background: rgb(245 246 248 / 90%);
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto;
     padding: 5px 10px;
+    color: black;
+    justify-items: stretch;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .navbar .logo, .navbar .user{
@@ -25,7 +33,22 @@
     text-align: center;
 }
 .navbar .nav a{
+    font-size: 22px;
     padding: 5px 10px;
+    text-transform: uppercase;
+    color: black;
+    transition: 0.3s;
+}
+
+.navbar .nav a:hover{
+    opacity: 0.6;
+}
+
+.navbar .nav a.active,
+.navbar .nav a.active:hover{
+    color: rgb(196, 196, 196);
+    opacity: 1;
+    cursor: no-drop;
 }
 
 .navbar .user img{
@@ -33,6 +56,30 @@
 }
 
 .navbar .user span{
-    font-size: 20px;
+    font-size: 31px;
     font-family: 'Metal Mania', cursive;
+}
+
+/* Adaptación a tabletas */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* Adaptación a movil */
+@media (min-width: 0px) and (max-width: 767px) {
+    .navbar{
+        grid-template-columns: 1fr;
+        justify-items: stretch;
+    }
+
+    .navbar .logo, .navbar .user{
+        grid-template-columns: auto 1fr;
+        justify-self: center;
+        padding: 10px 0 ;
+    }
+
+    .navbar .nav{
+        grid-auto-flow: row;
+        justify-content: center;
+    }
 }

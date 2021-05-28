@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/pages/home/home.component';
 import { GroupsComponent } from './components/pages/groups/groups.component';
 
-
-
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'groups', component: GroupsComponent },

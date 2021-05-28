@@ -7,18 +7,25 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { GroupsComponent } from './components/pages/groups/groups.component';
 
+import { GruposService } from './services/grupos.service';
+import { FooterComponent } from './components/footer/footer.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    GroupsComponent
+    GroupsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    GruposService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
