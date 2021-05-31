@@ -1,0 +1,24 @@
+article{
+    grid-template-rows: auto auto 1fr auto;
+    display: grid;
+    height: 100%;
+}
+
+article header h2{
+    font-size: 50px;
+}
+
+article p{
+    font-size: 20px;
+    /*text-align: justify;*/
+}
+
+/* Adaptación a tabletas */
+@media (min-width: 768px) and (max-width: 1024px) { }
+
+/* Adaptación a movil */
+@media (min-width: 0px) and (max-width: 767px) {
+    article header h2{
+        text-align: center;
+    }
+}

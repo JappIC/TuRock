@@ -1,4 +1,4 @@
-.navbar{
+header{
     background: rgb(245 246 248 / 90%);
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -13,26 +13,31 @@
     z-index: 1000;
 }
 
-.navbar .logo, .navbar .user{
+/* Marca */
+header .logo, header .user{
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
 }
 
-.navbar .logo img, .navbar .user img{
+header .logo img, header .user img{
     max-width: 40px;
-    height: auto;
     padding: 0 5px;
 }
 
-.navbar .nav{
+header .logo h1{
+    font-size: 30px;
+}
+
+/* Navegador */
+header .nav{
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-.navbar .nav a{
+header .nav > a{
     font-size: 22px;
     padding: 5px 10px;
     text-transform: uppercase;
@@ -40,24 +45,42 @@
     transition: 0.3s;
 }
 
-.navbar .nav a:hover{
+header .nav a:hover{
     opacity: 0.6;
 }
 
-.navbar .nav a.active,
-.navbar .nav a.active:hover{
+header .nav > a.active,
+header .nav > a.active:hover{
     color: rgb(196, 196, 196);
     opacity: 1;
-    cursor: no-drop;
+    cursor: help;
 }
 
-.navbar .user img{
+
+/* Usuario */
+header .user img{
     border-radius: 50%;
 }
 
-.navbar .user span{
-    font-size: 31px;
+header .user span{
+    font-size: 30px;
     font-family: 'Metal Mania', cursive;
+}
+
+header .buscador{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+}
+
+header .buscador input{
+    height: 30px;
+    margin-right: 5px;
+    font-family: 'Metal Mania', cursive;
+}
+
+header .buscador a svg{
+    padding-top: 5px;
 }
 
 /* Adaptación a tabletas */
@@ -67,19 +90,32 @@
 
 /* Adaptación a movil */
 @media (min-width: 0px) and (max-width: 767px) {
-    .navbar{
+    header{
         grid-template-columns: 1fr;
         justify-items: stretch;
     }
 
-    .navbar .logo, .navbar .user{
+    header .logo, header .user{
         grid-template-columns: auto 1fr;
         justify-self: center;
         padding: 10px 0 ;
     }
 
-    .navbar .nav{
+    header .logo{
+        cursor: pointer;
+    }
+
+    header .nav{
         grid-auto-flow: row;
         justify-content: center;
     }
+
+    .activado{
+        display: grid !important;
+    }
+
+    .desactivado{
+        display: none !important;
+    }
+
 }

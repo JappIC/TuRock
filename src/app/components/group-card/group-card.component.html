@@ -1,0 +1,20 @@
+<!--
+    Este componente es el encargado de la vista de las tarjetas para mostrar un resumen del grupo.
+-->
+
+<article (click)="verGrupo()">
+    <figure>
+        <img [src]="grupo.img" [alt]="grupo.nombre">
+        <figcaption>Foto del grupo {{grupo.nombre}} </figcaption>
+    </figure>
+    <header>
+        <h2>{{grupo.nombre}}</h2>
+    </header>
+    <!-- Usamos un pipe para truncar el texto al partir del caracter 200 y añadimos tres puntos suspensivos -->
+    <p>{{ (grupo.bio.length>200)? (grupo.bio | slice:0:200)+' ...':(grupo.bio)  }}</p>
+
+    <!-- Usamos un pipe para mostrar solo el año -->
+    <footer> Aparición: <span>{{grupo.aparicion | date:'y'}}</span></footer>
+</article>
+
+

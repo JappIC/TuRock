@@ -1,17 +1,17 @@
-<section class="{{config.classCss}} animated fadeIn fast">
+<section class="grupos animated fadeIn fast">
 
     <main>
-        <header>
-            <h1>{{config.titulo}}</h1>
-            <p>
-                Los mejores grupos de rock de la historia.
+        <header class="h-pages">
+            <h1>Buscando {{termino}}</h1>
+            <p class="mensaje" *ngIf="grupos.length == 0">
+                Tronco, el grupo <b>{{termino}}</b> no existe.
             </p>
         </header>
         <section class="bucle">
             <app-group-card
-                (grupoSeleccionado)="verGrupo($event)"
                 class="grupo"
-                [grupo]="grupo" [index]="i"
+                [grupo]="grupo"
+                [index]="grupo.idx"
                 *ngFor="let grupo of grupos;
                 let i = index"
             ></app-group-card>

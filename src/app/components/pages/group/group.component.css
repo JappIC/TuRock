@@ -1,0 +1,30 @@
+section{
+    display: grid;
+}
+
+section main{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* CSS del Artítulo */
+section main article{
+    display: grid;
+}
+
+article p{
+    background:rgba(0, 0, 0, 0.60);
+    padding: 25px 25px;
+}
+
+article img{
+    box-shadow: 0 0 10px #000;
+}
+
+article header h1{
+    color: black;
+    font-size: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 20px;
+}

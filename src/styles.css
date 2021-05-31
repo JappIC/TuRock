@@ -1,13 +1,16 @@
+/* Formateo */
 body{
     background-color: black;
     color: white;
     font-family: 'Mate SC', serif;
+    font-size: 22px;
     margin: 0;
     padding-top: 100px;
 }
 
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -18,6 +21,20 @@ h1,h2,h3,h4,h5,h6{
 figure{
     margin: 0;
     padding: 0;
+}
+
+figure figcaption{
+    font-size: 12px;
+    text-align: right;
+}
+
+img{
+    height: auto;
+    width: 100%;
+}
+
+input{
+    font-size: 22px;
 }
 
 /* FW CSS */
@@ -36,10 +53,8 @@ figure{
     top: 0;
 }
 
-.ptr-bottom{
-    bottom: auto;
-    position: absolute;
-    transform: rotate(180deg);
+.mensaje{
+    color: red;
 }
 
 /* Adaptación a tabletas */
@@ -50,7 +65,13 @@ figure{
 /* Adaptación a movil */
 @media (min-width: 0px) and (max-width: 767px) {
     body{
-        padding-top: 200px;
+        padding-top: 115px;
+    }
+
+    .ptr-top{
+        position: fixed;
+        top: 0;
+        width: 1600px;
     }
 }
 
