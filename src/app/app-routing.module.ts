@@ -4,12 +4,15 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { GroupsComponent } from './components/pages/groups/groups.component';
 import { GroupComponent } from './components/pages/group/group.component';
 import { SearchComponent } from './components/pages/search/search.component';
+import { FormGroupComponent } from './components/pages/group/form-group/form-group.component';
+
 
 
 const routes: Routes = [
     { path: 'home',             component: HomeComponent },
     { path: 'groups',           component: GroupsComponent },
     { path: 'group/:id',        component: GroupComponent },
+    { path: 'form',             component: FormGroupComponent },
     { path: 'search/:termino',  component: SearchComponent },
 
     // Rectirecciona a la home

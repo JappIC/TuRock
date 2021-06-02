@@ -1,16 +1,77 @@
 /* Formateo */
+:root {
+    --blanco: white;
+    --negro: black;
+
+    --input-border: #8b8a8b;
+    --input-focus-h: 0;
+    --input-focus-s: 0%;
+    --input-focus-l: 100%;
+
+    --input-focus-h-invalid: 0;
+    --input-focus-s-invalid: 74%;
+    --input-focus-l-invalid: 31%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body{
-    background-color: black;
-    color: white;
+    background-color: var(--negro);
+    color: var(--blanco);
     font-family: 'Mate SC', serif;
     font-size: 22px;
     margin: 0;
     padding-top: 100px;
 }
 
+input:not(textarea) {
+    line-height: 1;
+    height: 2.25rem;
+}
+
+input,textarea{
+    font-family: 'Mate SC', serif;
+    border-radius: 5px;
+    background-color: var(--blanco);
+    border: 2px solid var(--input-border);
+    padding: 5px;
+    transition: 180ms box-shadow ease-in-out;
+}
+
+input[readonly], textarea[readonly] {
+    border-style: dotted;
+    cursor: not-allowed;
+    color: #777;
+}
+
+input[disabled] , textarea[disabled]{
+    --input-border: #ccc;
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+input:focus, textarea:focus {
+    border-color: hsl(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l));
+    box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) + 40%), 0.8);
+    outline: 3px solid transparent;
+}
+
+textarea{
+    font-size: 20px;
+}
+
+input{
+    font-size: 22px;
+}
+
 a{
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -33,15 +94,12 @@ img{
     width: 100%;
 }
 
-input{
-    font-size: 22px;
+pre{
+    background-color: var(--negro);
+    color: var(--blanco);
 }
 
 /* FW CSS */
-
-.contenedor{
-    display: grid;
-}
 
 .papel-turock{
     z-index: -1;
@@ -57,21 +115,25 @@ input{
     color: red;
 }
 
-/* Adaptación a tabletas */
-@media (min-width: 768px) and (max-width: 1024px) {
+.is-invalid{
+    border-color: hsl(var(--input-focus-h-invalid), var(--input-focus-s-invalid), var(--input-focus-l-invalid));
+    box-shadow: 0 0 0 3px hsla(var(--input-focus-h-invalid), var(--input-focus-s-invalid), calc(var(--input-focus-l-invalid) + 40%), 0.8);
+    color: var(--blanco) !important;
+}
 
+/* Adaptación a tabletas */
+@media (min-width: 0px) and (max-width: 1024px) {
+    .ptr-top{
+        position: fixed;
+        top: 0;
+        width: 1600px;
+    }
 }
 
 /* Adaptación a movil */
 @media (min-width: 0px) and (max-width: 767px) {
     body{
         padding-top: 115px;
-    }
-
-    .ptr-top{
-        position: fixed;
-        top: 0;
-        width: 1600px;
     }
 }
 

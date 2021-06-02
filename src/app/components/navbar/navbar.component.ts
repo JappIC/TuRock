@@ -8,6 +8,11 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
+    // Heredamos del componente padre app,component
+    @Input() titulo:string= "";
+    @Input() anio: number= 0;
+
+    // El menú se ocultará en dispositivos móviles, pero al hacer click en el logo se mostrará.
     menuActivado:boolean = false
 
     constructor( private router:Router ) { }

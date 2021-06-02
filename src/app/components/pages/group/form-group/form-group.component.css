@@ -1,0 +1,47 @@
+section main{
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+section main form{
+    margin: 0 auto;
+    max-width: 700px;
+    background-color: rgba(0, 0, 0, 0.80);
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+section main form div{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    margin: 50px 0;
+    position: relative;
+}
+
+section main form div small{
+    background-color: rgb(136 20 20);
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px #4a4a4a;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    margin: -5px -320px 0 0;
+    text-align: left;
+    width: 300px;
+
+}
+
+/* Adaptación a tabletas y movil*/
+@media (min-width: 0px) and (max-width: 1024px) {
+    section main form div{
+        grid-template-columns:1fr;
+    }
+    section main form div small{
+        position: relative;
+        right: 0;
+        margin: 10px 0 0;
+    }
+}
+

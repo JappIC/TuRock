@@ -1,25 +1,16 @@
-<section class="home animated fadeIn fast">
+<!--
+    Vista de la página grupos
+-->
+
+<section class="pag-grupos animated fadeIn fast">
+
     <main>
-        <article>
-            <header>
-                <h1>Home</h1>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Alias consequuntur molestiae at porro dignissimos dolore accusamus! Sed cum dicta quo a saepe,
-                    non maiores, soluta, nisi consequuntur nesciunt at necessitatibus!
-                </p>
-            </header>
-
-        </article>
-
-        <section class="compartir">
-
-        </section>
-
+        <app-header [tituloH]="'TuRock'" [descripcionH]="'Una herremienta para crear una lista de bandas de Rock'"> </app-header>
     </main>
 
     <aside>
-
+        <app-share [urlRuta]="urlRuta"></app-share>
     </aside>
+
 </section>
 

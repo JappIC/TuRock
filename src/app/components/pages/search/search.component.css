@@ -1,31 +1,5 @@
-/* Página */
-.grupos{
-    display: grid;
-}
-
-.grupos main{
-    display: grid;
-}
-
-.grupos main > header{
-    color: black;
-    display: grid;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.grupos main > header h1{
-    font-size: 60px;
-    text-align: center;
-}
-
-.grupos main > header p{
-    text-align: justify;
-    padding: 30px;
-}
-
 /* Bucle de grupos y articulo de grupo */
-.grupos .bucle{
+section main .bucle{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3em;
@@ -34,7 +8,7 @@
     padding: 2vh;
 }
 
-.grupos .bucle .grupo{
+.bucle .grupo{
     background: url("https://i.pinimg.com/originals/33/8b/65/338b65bfb713c5f83404a65f32dc87e7.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -42,31 +16,29 @@
     cursor: pointer;
     padding: 1em;
     transition: 1s;
+    border: 1px solid black;
 }
 
-.grupos .bucle .grupo:hover{
-    padding: 1.9vh;
+.bucle .grupo:hover{
     border: 1px solid white;
 }
 
 /* Adaptación a tabletas */
 @media (min-width: 768px) and (max-width: 1024px) {
 
-    .grupos .bucle{
+    section main .bucle{
         grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
-/* Adaptación a movil */
+/* Adaptación a móvil */
 @media (min-width: 0px) and (max-width: 767px) {
-    .grupos .bucle{
+    section main .bucle{
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .grupos main > header p,
-    .grupos main > header h1{
-        color: white;
+    .grupo header h2{
+        text-align: center;
     }
-
 }

@@ -1,0 +1,111 @@
+<hr>
+<pre>
+    Estado del formulario: {{ forma.valid }}
+    <br>
+    Status: {{ forma.status }}
+</pre>
+
+<pre>
+    {{ forma.value | json }}
+</pre>
+<hr>
+<section class="page-grupo animated fadeIn fast">
+
+    <main>
+        <app-header [tituloH]="'Formulario'"></app-header>
+        <form autocomplete="off" [formGroup]="forma" (ngSubmit)="guardar()">
+
+            <div>
+                <label for="">Nombre</label>
+                <input
+                    formControlName="nombre"
+                    type="text"
+                    placeholder="Nombre de un grupo"
+                    [class.is-invalid]="nombreNoValido"
+                >
+                <small class="animated fadeIn fast"*ngIf="nombreNoValido">
+                    <i class="fas fa-exclamation-circle"></i> Ingresa mínimo 4 caracteres
+                </small>
+            </div>
+            <div>
+                <label for="">Imagen</label>
+                <input
+                    formControlName="img"
+                    type="text"
+                    placeholder="https://www.imagen.es/img.jpg"
+                    [class.is-invalid]="imgNoValido"
+                >
+                <small class="animated fadeIn fast"*ngIf="imgNoValido">
+                    <i class="fas fa-exclamation-circle"></i> Ingresa una URL valida
+                </small>
+            </div>
+            <div>
+                <label for="">Biografia</label>
+                <textarea
+                    formControlName="bio"
+                    name=""
+                    id=""
+                    rows="20"
+                    placeholder="Añade una biografía del grupo"
+                    [class.is-invalid]="bioNoValido"
+                ></textarea>
+                <small class="animated fadeIn fast"*ngIf="bioNoValido">
+                    <i class="fas fa-exclamation-circle"></i> Tienes que añadir una bio
+                </small>
+            </div>
+            <div>
+                <label for="">Vídeo</label>
+                <input
+                    formControlName="video"
+                    type="text"
+                    placeholder="https://www.youtube.com/embed/7ECWloUWw9M"
+                    [class.is-invalid]="videoNoValido"
+                >
+                <small class="animated fadeIn fast"*ngIf="videoNoValido">
+                    <i class="fas fa-exclamation-circle"></i> Ingresa una URL valida
+                </small>
+            </div>
+            <div>
+                <label for="">Wikipedia</label>
+                <input
+                    formControlName="wiki"
+                    type="text"
+                    placeholder="https://es.wikipedia.org/wiki/Rock"
+                    [class.is-invalid]="wikiNoValido"
+                >
+                <small class="animated fadeIn fast"*ngIf="wikiNoValido">
+                    <i class="fas fa-exclamation-circle"></i> Ingresa una URL valida
+                </small>
+            </div>
+            <div>
+                <label for="">Aparición</label>
+                <input
+                    formControlName="aparicion"
+                    type="date"
+                    [class.is-invalid]="aparicionNoValido"
+                >
+                <small class="animated fadeIn fast"*ngIf="aparicionNoValido">
+                    <i class="fas fa-exclamation-circle"></i> Ingresa una fecha valida
+                </small>
+            </div>
+
+            <button type="submit">Guardar</button>
+
+        </form>
+    </main>
+
+    <a [routerLink]="['/groups']">Volver</a>
+</section>
+
+<hr>
+<pre>
+    Estado del formulario: {{ forma.valid }}
+    <br>
+    Status: {{ forma.status }}
+</pre>
+
+<pre>
+    {{ forma.value | json }}
+</pre>
+<hr>
+

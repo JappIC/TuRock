@@ -15,19 +15,13 @@ import { GruposService, Grupo } from '../../../services/grupos.service';
 })
 export class GroupsComponent implements OnInit {
 
-    // Configuración
-    config:any = {
-        titulo: 'Grupos',
-        classCss: 'page-grupos',
-    }
-
+    urlRuta:string = this.router.url;
     // Añadimos un arreglo de tipo Grupo con una interface
     grupos:Grupo[] = [];
 
     constructor(
         private _gruposService:GruposService,
         private router:Router
-
     ) {  }
 
     ngOnInit(): void {

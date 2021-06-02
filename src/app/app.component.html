@@ -1,15 +1,11 @@
-<div class="contenedor">
+<!-- NAVEGADOR - HEADER PRINCIPAL-->
+<app-navbar [titulo]="titulo"></app-navbar>
 
-    <!-- NAVEGADOR - HEADER PRINCIPAL-->
-    <app-navbar></app-navbar>
+<!-- RUTAS -->
+<router-outlet></router-outlet>
 
-    <!-- RUTAS -->
-    <router-outlet></router-outlet>
-
-    <!-- FOOTER -->
-    <app-footer></app-footer>
-
-</div>
+<!-- FOOTER -->
+<app-footer [titulo]="titulo" [anio]="anio"></app-footer>
 
 
 

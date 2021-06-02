@@ -1,14 +1,23 @@
+<!--
+    Vista para mostrar el header principal y menú de la app
+-->
+
 <!-- Imagen de papel-->
 <img class="papel-turock ptr-top" src="/assets/img/papel.png" alt="Papel TuRock">
 
-<header class="navbar">
+<!-- Header principal que contiene el menu de la aplicación-->
+<header class="header navbar">
+    <!-- Si la app es de tamaño movil se podra interactuar con el logo para mostrar o ocultar el menú -->
     <div class="logo" (click)="menuActivado = !menuActivado">
         <img src="assets/img/LogoTuRock.png" alt="TuRock">
-        <h1>Titulo</h1>
+        <h1>{{titulo}}</h1>
     </div>
+    <!-- Navegador de la app. Se ocultará para móvil-->
     <nav class="nav animated fadeIn fast" [ngClass]="{'activado': menuActivado, 'desactivado': !menuActivado}">
+        <!-- Navegación-->
         <a [routerLink]="['home']" routerLinkActive="active" >Home</a>
         <a [routerLink]="['groups']" routerLinkActive="active" >Grupos</a>
+        <!-- Buscador-->
         <div class="buscador">
             <input
                 type="search"
@@ -23,14 +32,14 @@
                     viewBox="0 0 24 24"
                     width="24px"
                     fill="#000000"
-                ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
             </a>
         </div>
     </nav>
+    <!-- Información de usuario. Se ocultará para móvil -->
     <div class="user animated fadeIn fast" [ngClass]="{'activado': menuActivado, 'desactivado': !menuActivado}">
         <img src="assets/img/avatar.jpg" alt="Avatar">
-        <span>Nombre</span>
+        <span>Homer</span>
     </div>
 </header>
-
-
