@@ -1,27 +1,34 @@
 # TuRock
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
+TuRock es un proyecto SPA desarrollada con el Framewok Angular y generado con [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2. Este proyecto se usa para el aprendizaje y muestra de capacidades. Siéntase libre de clonar este proyecto.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Servicio:
+La aplicación muestra 8 grupos de rock que son exportados desde el “grupos.service.ts” y que contiene un arreglo de objetos de grupos.
+Propiedades del Objeto grupo: nombre, bio, img, aparición, vídeo, wiki y idx.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Componentes globales (app/components):
 
-## Build
+Navbar y footer
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Componentes reutilizables (app/components):
 
-## Running unit tests
+group-card, header, share y slider.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Componentes de Páginas (app/components/page):
 
-## Running end-to-end tests
+group, groups, home, search y form.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Pipes personalizado (app/components/pipes):
 
-## Further help
+TuRock ya viene con un pipe personalizado para validar url.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Otros datos de interés:
+
+- TuRock usa formulario reactivo y ya integra lógica de validaciones.
+- La parte del GRUD no está implementada.
+- Para añadir un nuevo grupo, interactúa con el botón + en la esquina inferior derecha
+- Dentro de la página de grupo, en el footer del artículo tiene las opciones de eliminar y editar 
+- Preparada para adaptarse a dispositivos móviles y tabletas.
+

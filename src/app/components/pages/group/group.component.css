@@ -14,11 +14,11 @@ article p{
 }
 
 article img{
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px var(--negro);
 }
 
 article header h1{
-    color: black;
+    color: var(--negro);
     font-size: 60px;
     margin-bottom: 50px;
     text-align: center;
@@ -26,10 +26,10 @@ article header h1{
 }
 
 article footer {
-    background: white;
+    background: var(--blanco);
     margin-top: 20px;
-    border: 1px solid black;
-    color: black;
+    border: 1px solid var(--negro);
+    color: var(--negro);
     padding: 10px 20px;
 }
 
@@ -37,6 +37,34 @@ article footer a{
     color: rgb(160, 160, 160);
 }
 
+article footer .opciones{
+    float: right;
+}
+
+article footer .opciones a{
+    margin-left: 10px;
+}
+
 article footer a:hover{
-    color: black;
+    color: var(--negro);
+}
+
+/* Adaptación a movil */
+@media (min-width: 0px) and (max-width: 767px) {
+    article footer .opciones{
+        float: none;
+        margin-top: 10px;
+    }
+}
+
+/* Formateamos los elementos para el formato de impresora */
+@media print
+{
+    article footer, article figure iframe{
+        display: none !important;
+    }
+
+    article p{
+        color: var(--negro);
+    }
 }

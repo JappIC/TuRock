@@ -1,5 +1,4 @@
 <section class="page-grupo animated fadeIn fast">
-
     <main>
         <article>
             <app-header [tituloH]="grupo.nombre"></app-header>
@@ -22,6 +21,10 @@
             </figure>
             <footer>
                 Mas información en: <a [href]="grupo.wiki | domseguro"><i class="fab fa-wikipedia-w"></i>ikipedia</a>
+                <div class="opciones">
+                    <a (click)="editarGrupo(grupo.idx)"><i class="far fa-edit"></i></a>
+                    <a [href]=""><i class="far fa-trash-alt"></i></a>
+                </div>
             </footer>
         </article>
     </main>
@@ -29,6 +32,4 @@
     <aside>
         <app-share [urlRuta]="urlRuta"></app-share>
     </aside>
-
-    <a [routerLink]="['/groups']">Volver</a>
 </section>

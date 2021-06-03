@@ -3,7 +3,7 @@
 -->
 
 <!-- Imagen de papel-->
-<img class="papel-turock ptr-top" src="/assets/img/papel.png" alt="Papel TuRock">
+<img class="papel-turock" src="/assets/img/papel.png" alt="Papel TuRock">
 
 <!-- Header principal que contiene el menu de la aplicación-->
 <header class="header navbar">
@@ -12,7 +12,7 @@
         <img src="assets/img/LogoTuRock.png" alt="TuRock">
         <h1>{{titulo}}</h1>
     </div>
-    <!-- Navegador de la app. Se ocultará para móvil-->
+    <!-- Navegación. Se ocultará para móvil y se mostrará al pulsar el logo y título de la app-->
     <nav class="nav animated fadeIn fast" [ngClass]="{'activado': menuActivado, 'desactivado': !menuActivado}">
         <!-- Navegación-->
         <a [routerLink]="['home']" routerLinkActive="active" >Home</a>
@@ -37,7 +37,7 @@
             </a>
         </div>
     </nav>
-    <!-- Información de usuario. Se ocultará para móvil -->
+    <!-- Información de usuario. Se ocultará para móvil y se mostrará al pulsar el logo y título de la app -->
     <div class="user animated fadeIn fast" [ngClass]="{'activado': menuActivado, 'desactivado': !menuActivado}">
         <img src="assets/img/avatar.jpg" alt="Avatar">
         <span>Homer</span>

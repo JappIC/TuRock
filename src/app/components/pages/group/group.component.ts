@@ -25,13 +25,18 @@ export class GroupComponent implements OnInit {
         this.activatedRoute.params.subscribe( params =>{
             //console.log(params['id']);
             this.grupo = this._gruposService.getGrupo( params['id'] );
-            console.log(this.grupo);
-
+            //console.log(this.grupo);
         })
 
     }
 
     ngOnInit(): void {
+
+    }
+
+    // Metodo para editar el grupo
+    editarGrupo( idx:number ){
+        this.router.navigate(['/form', idx]);
     }
 
 }

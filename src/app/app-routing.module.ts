@@ -13,6 +13,7 @@ const routes: Routes = [
     { path: 'groups',           component: GroupsComponent },
     { path: 'group/:id',        component: GroupComponent },
     { path: 'form',             component: FormGroupComponent },
+    { path: 'form/:id',         component: FormGroupComponent },
     { path: 'search/:termino',  component: SearchComponent },
 
     // Rectirecciona a la home

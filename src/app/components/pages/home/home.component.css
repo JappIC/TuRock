@@ -1,0 +1,53 @@
+section{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.info{
+    background: url("https://i.pinimg.com/originals/33/8b/65/338b65bfb713c5f83404a65f32dc87e7.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    font-family: 'Ubuntu', serif;
+    grid-template-columns: 50% 50%;
+    padding: 20px;
+}
+
+.info div{
+    padding: 20px;
+}
+
+.info div ul{
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.info div p{
+    font-size: 18px;
+}
+
+.info div p span{
+    font-size: 18px;
+}
+
+.info div h3{
+    font-size: 22px;
+}
+
+.info div h3 span{
+    font-size: 18px;
+    font-family: 'Ubuntu', serif;
+}
+
+/* Adaptación a tabletas */
+@media (min-width: 0px) and (max-width: 1024px) {
+    .info{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Adaptación a movil */
+@media (min-width: 0px) and (max-width: 767px) {
+    body{
+        padding-top: 115px;
+    }
+}

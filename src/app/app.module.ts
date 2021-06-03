@@ -30,6 +30,7 @@ import '@angular/common/locales/global/es';
 
 // Pipes
 import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { SliderComponent } from './components/slider/slider.component';
 
 
 
@@ -48,6 +49,7 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
         HeaderComponent,
         ShareComponent,
         FormGroupComponent,
+        SliderComponent,
     ],
     imports: [
         BrowserModule,

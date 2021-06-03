@@ -5,8 +5,6 @@ import { NodeCompatibleEventEmitter } from 'rxjs/internal/observable/fromEvent';
     providedIn: 'root'
 })
 
-
-
 export class GruposService {
     private grupos:Grupo[] = [
         {
@@ -18,6 +16,7 @@ export class GruposService {
             aparicion: "1968-03-18",
             video:"https://www.youtube.com/embed/HQmmM_qwG4k",
             wiki: "https://es.wikipedia.org/wiki/Led_Zeppelin",
+            idx: 0,
         },
         {
             nombre: "The Rolling Stones",
@@ -30,6 +29,7 @@ export class GruposService {
             aparicion: "1962-04-09",
             video:"https://www.youtube.com/embed/DYjfJfoWmt4",
             wiki: "https://es.wikipedia.org/wiki/The_Rolling_Stones",
+            idx: 1,
         },
         {
             nombre: "Queen",
@@ -41,6 +41,7 @@ export class GruposService {
             aparicion: "1970-11-13",
             video: "https://www.youtube.com/embed/fJ9rUzIMcZQ",
             wiki: "https://es.wikipedia.org/wiki/Queen",
+            idx: 2,
         },
         {
             nombre: "Pink Floyd",
@@ -53,6 +54,7 @@ export class GruposService {
             aparicion: "1965-03-20",
             video:"https://www.youtube.com/embed/YR5ApYxkU-U",
             wiki: "https://es.wikipedia.org/wiki/Pink_Floyd",
+            idx: 3,
         },
         {
             nombre: "Deep Purple",
@@ -64,6 +66,7 @@ export class GruposService {
             aparicion: "1968-06-01",
             video: "https://www.youtube.com/embed/ikGyZh0VbPQ",
             wiki: "https://es.wikipedia.org/wiki/Deep_Purple",
+            idx: 4,
         },
         {
             nombre: "AC/DC",
@@ -80,6 +83,7 @@ export class GruposService {
             aparicion: "1972-01-01",
             video: "https://www.youtube.com/embed/gEPmA3USJdI",
             wiki: "https://es.wikipedia.org/wiki/AC/DC",
+            idx: 5,
         },
         {
             nombre: "The Ramones",
@@ -95,6 +99,7 @@ export class GruposService {
             aparicion: "1974-05-13",
             video: "https://www.youtube.com/embed/HJWFsZ_YUc4",
             wiki: "https://es.wikipedia.org/wiki/Ramones",
+            idx: 6,
         },
         {
             nombre: "Kiss",
@@ -112,6 +117,7 @@ export class GruposService {
             aparicion: "1973-01-01",
             video: "https://www.youtube.com/embed/ZhIsAZO5gl0",
             wiki: "https://es.wikipedia.org/wiki/Kiss",
+            idx: 7,
         },
     ];
 

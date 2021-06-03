@@ -1,14 +1,3 @@
-<hr>
-<pre>
-    Estado del formulario: {{ forma.valid }}
-    <br>
-    Status: {{ forma.status }}
-</pre>
-
-<pre>
-    {{ forma.value | json }}
-</pre>
-<hr>
 <section class="page-grupo animated fadeIn fast">
 
     <main>
@@ -89,7 +78,7 @@
                 </small>
             </div>
 
-            <button type="submit">Guardar</button>
+            <button type="submit"><i class="far fa-save"></i> Guardar</button>
 
         </form>
     </main>
@@ -98,14 +87,10 @@
 </section>
 
 <hr>
-<pre>
+<pre style="display: none;">
     Estado del formulario: {{ forma.valid }}
     <br>
     Status: {{ forma.status }}
-</pre>
 
-<pre>
     {{ forma.value | json }}
 </pre>
-<hr>
-

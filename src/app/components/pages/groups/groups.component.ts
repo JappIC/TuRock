@@ -1,8 +1,5 @@
-import { hostViewClassName, ParseSpan } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-
 import { Router } from '@angular/router';
-
 
 // Servicios
 import { GruposService, Grupo } from '../../../services/grupos.service';

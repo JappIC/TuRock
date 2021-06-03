@@ -1,14 +1,58 @@
 <!--
     Vista de la página grupos
 -->
-
 <section class="pag-grupos animated fadeIn fast">
 
     <main>
-        <app-header [tituloH]="'TuRock'" [descripcionH]="'Una herremienta para crear una lista de bandas de Rock'"> </app-header>
+        <article>
+            <!--APP HEADER -->
+            <app-header [tituloH]="'TuRock'" [descripcionH]="'Una herremienta para crear una lista de bandas de Rock'"> </app-header>
+
+            <!--INFO -->
+            <div class="info">
+                <div>
+                    <h2>Información</h2>
+                    <p>
+                        TuRock es un proyecto SPA desarrollada con el Framewok Angular en su versión 12.0.6  y generado con Angular CLI.
+                        Este proyecto se usa para el aprendizaje y muestra de capacidades. Siéntase libre de clonar este proyecto.
+                    </p>
+
+                    <h3>Servicio:</h3>
+                    <p>
+                        La aplicación muestra 8 grupos de rock que son exportados desde el “grupos.service.ts” y que contiene un arreglo de objetos de grupos.
+                        Propiedades del Objeto grupo: nombre, bio, img, aparición, vídeo, wiki y idx.
+                    </p>
+
+                    <h3>Componentes globales <span>(app/components):</span></h3>
+                    <p>Navbar y footer.</p>
+
+                    <h3>Componentes reutilizables <span>(app/components):</span></h3>
+                    <p>group-card, header, share y slider.</p>
+
+                    <h3>Componentes de Páginas <span>(app/components/page):</span></h3>
+                    <p>group, groups, home, search y form.</p>
+
+                    <h3>Pipes personalizado <span>(app/components/pipes):</span></h3>
+                    <p>TuRock ya viene con un pipe personalizado para validar url.</p>
+
+                    <h3>Otros datos de interés:</h3>
+                    <ul>
+                        <li>TuRock usa formulario reactivo y ya integra lógica de validaciones.</li>
+                        <li>La parte del GRUD no está implementada.</li>
+                        <li>Para añadir un nuevo grupo, interactúa con el botón + en la esquina inferior derecha.</li>
+                        <li>Dentro de la página de grupo, en el footer del artículo tiene las opciones de eliminar y editar.</li>
+                        <li>Preparada para adaptarse a dispositivos móviles y tabletas.</li>
+                    </ul>
+                </div>
+
+                <!-- APP SLIDER -->
+                <app-slider></app-slider>
+            </div>
+        </article>
     </main>
 
     <aside>
+        <!-- APP SHARE -->
         <app-share [urlRuta]="urlRuta"></app-share>
     </aside>
 
