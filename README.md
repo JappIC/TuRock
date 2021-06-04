@@ -2,25 +2,44 @@
 
 TuRock es un proyecto SPA desarrollada con el Framewok Angular y generado con [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2. Este proyecto se usa para el aprendizaje y muestra de capacidades. Siéntase libre de clonar este proyecto.
 
-
 ## Servicio:
 La aplicación muestra 8 grupos de rock que son exportados desde el “grupos.service.ts” y que contiene un arreglo de objetos de grupos.
 Propiedades del Objeto grupo: nombre, bio, img, aparición, vídeo, wiki y idx.
 
-
 ## Componentes globales (app/components):
+Los componentes globales son siempre visible en todas las partes de al app
+### Navbar
+Es el componente encargado del header principal de la app, menú de navegación y datos de usuario.
+### Footer
+Contiene el título con copyright y el botón añadir nuevo grupo.
 
-Navbar y footer
 
 ## Componentes reutilizables (app/components):
+Los componentes reutilizables están preparados para poder añadirlos en las diferentes partes de la app
+### group-card
+Es el contenedor de las tarjetas de presentación de los grupos. 
+### Header
+La cabecera genérica utilizada en las páginas.
+### share 
+Permite compartir e imprimir la página.
+### Slider
+Un deslizador hecho en css.
 
-group-card, header, share y slider.
 
 ## Componentes de Páginas (app/components/page):
+Los componentes de página se encargan de unificar los diferentes reutilizables y lógica
+### group
+Muestra un grupo individual.
+### Groups
+Muestra todos los grupos.
+### Home
+Portada principal de la app.
+### Search
+Encargada de mostrar los resultados de busqueda. 
+### Form
+El formulario de registro de nuevo grupo.
 
-group, groups, home, search y form.
-
-## Pipes personalizado (app/components/pipes):
+## Pipe personalizado (app/components/pipes):
 
 TuRock ya viene con un pipe personalizado para validar url.
 

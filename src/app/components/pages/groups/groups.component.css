@@ -12,15 +12,14 @@ section main .bucle{
     background: url("https://i.pinimg.com/originals/33/8b/65/338b65bfb713c5f83404a65f32dc87e7.jpg");
     background-size: cover;
     background-attachment: fixed;
-    color:#fff;
     cursor: pointer;
     padding: 1em;
     transition: 1s;
-    border: 1px solid black;
+    border: 1px solid var(--negro);
 }
 
 .bucle .grupo:hover{
-    border: 1px solid white;
+    border: 1px solid var(--blanco);
 }
 
 .grupo:nth-child(1) {
@@ -62,6 +61,14 @@ section main .bucle{
 
     .grupo header h2{
         text-align: center;
+    }
+}
+
+/* Formateamos los elementos para el formato de impresora */
+@media print
+{
+    .bucle .grupo{
+        border: 0;
     }
 }
 

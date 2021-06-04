@@ -158,7 +158,7 @@ pre{
 
 /* Adaptación a tabletas */
 @media (min-width: 0px) and (max-width: 1024px) {
-    .ptr-top{
+    .papel-turock{
         position: fixed;
         top: 0;
         width: 1600px;
@@ -169,6 +169,18 @@ pre{
 @media (min-width: 0px) and (max-width: 767px) {
     body{
         padding-top: 115px;
+    }
+}
+
+/* Formateamos los elementos para el formato de impresora */
+@media print
+{
+    body, h1,h2,h3,h4,h5,h6{
+        color: var(--negro);
+    }
+
+    .btn-nuevo-grupo{
+        display: none;
     }
 }
 

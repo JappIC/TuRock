@@ -4,7 +4,7 @@ header{
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto;
     padding: 5px 10px;
-    color: black;
+    color: var(--negro);
     justify-items: stretch;
     position: fixed;
     top: 0;
@@ -41,7 +41,7 @@ header .nav > a{
     font-size: 22px;
     padding: 5px 10px;
     text-transform: uppercase;
-    color: black;
+    color: var(--negro);
     transition: 0.3s;
 }
 

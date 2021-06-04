@@ -8,7 +8,8 @@ section{
     background-attachment: fixed;
     display: grid;
     font-family: 'Ubuntu', serif;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 200px;
     padding: 20px;
 }
 

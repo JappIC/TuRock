@@ -60,6 +60,7 @@ section ul li p {
     color: var(--blanco);
     font-size: 20px;
     margin: 0;
+    margin: 0 0 10px 0;
     padding: 0;
     text-shadow: 1px 1px var(--negro);
     text-align: center;
@@ -67,4 +68,11 @@ section ul li p {
 
 ::marker{
     color: var(--negro);
+}
+
+@media print
+{
+    section{
+        display: none;
+    }
 }
