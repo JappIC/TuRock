@@ -2,6 +2,8 @@
 
 TuRock es un proyecto SPA desarrollada con el Framewok Angular y generado con [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2. Este proyecto se usa para el aprendizaje y muestra de capacidades. Siéntase libre de clonar este proyecto.
 
+<img src="/src/assets/img/TuRock-page-grupos.png" alt="Captura de imagen TuRock"/>
+
 ## Servicio:
 La aplicación muestra 8 grupos de rock que son exportados desde el “grupos.service.ts” y que contiene un arreglo de objetos de grupos.
 Propiedades del Objeto grupo: nombre, bio, img, aparición, vídeo, wiki y idx.
@@ -51,3 +53,7 @@ TuRock ya viene con un pipe personalizado para validar url.
 - Dentro de la página de grupo, en el footer del artículo tiene las opciones de eliminar y editar 
 - Preparada para adaptarse a dispositivos móviles y tabletas.
 
+<img src="/src/assets/img/TuRock-page-grupos.png" alt="Página grupos"/>
+<img src="/src/assets/img/TuRock-page-grupo.png" alt="Página grupo"/>
+<img src="/src/assets/img/TuRock-page-form-validacion.png" alt="Página formulario"/>
+<img src="/src/assets/img/TuRock-movil.png" alt="Vista de movil"/>
